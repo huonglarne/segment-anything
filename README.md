@@ -1,3 +1,12 @@
+
+  conda create -n segment python=3.8
+  conda activate segment
+  pip install -e .
+  pip install opencv-python pycocotools matplotlib 
+  update-moreh --torch 1.13.1 --force
+
+  python scripts/amg.py --checkpoint "checkpoints/sam_vit_b_01ec64.pth" --model-type "vit_b" --input "assets/notebook1.png" --output "assets/notebook1_processed.png"
+
 # Segment Anything
 
 **[Meta AI Research, FAIR](https://ai.facebook.com/research/)**
